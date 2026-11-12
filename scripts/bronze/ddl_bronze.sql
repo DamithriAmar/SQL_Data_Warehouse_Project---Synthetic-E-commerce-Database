@@ -16,16 +16,16 @@ IF OBJECT_ID ('bronze.customers', 'U') IS NOT NULL
 	DROP TABLE bronze.customers;
 CREATE TABLE bronze.customers
 (
-		customer_id INT,
-		first_name VARCHAR(50),
-		last_name VARCHAR(50),
-		email VARCHAR(50),
-		phone VARCHAR(50),
-		country VARCHAR(50),
-		city VARCHAR(50),
-		signup_date DATE,
-		loyalty_tier VARCHAR(50),
-		marketing_opt_in VARCHAR(50)	
+		customer_id VARCHAR(50) NULL,
+		first_name VARCHAR(50) NULL,
+		last_name VARCHAR(50) NULL,
+		email VARCHAR(50) NULL,
+		phone VARCHAR(50) NULL,
+		country VARCHAR(50) NULL,
+		city VARCHAR(50) NULL,
+		signup_date VARCHAR(50) NULL,
+		loyalty_tier VARCHAR(50) NULL,
+		marketing_opt_in VARCHAR(50) NULL	
 );
 PRINT 'bronze.customers TABLE CREATED!!';
 --=================================================================================================
@@ -38,16 +38,16 @@ IF OBJECT_ID ('bronze.products', 'U') IS NOT NULL
 	DROP TABLE bronze.products;
 CREATE TABLE bronze.products
 (
-		product_id INT,
-		sku VARCHAR(50),
-		product_name VARCHAR(50),
-		category VARCHAR(50),
-		brand VARCHAR(50),
-		unit_price FLOAT,
-		unit_cost FLOAT,
-		weight_kg FLOAT,
-		is_active VARCHAR(50),
-		created_at DATE
+		product_id VARCHAR(50) NULL,
+		sku VARCHAR(50) NULL,
+		product_name VARCHAR(50) NULL,
+		category VARCHAR(50) NULL,
+		brand VARCHAR(50) NULL,
+		unit_price VARCHAR(50) NULL,
+		unit_cost VARCHAR(50) NULL,
+		weight_kg VARCHAR(50) NULL,
+		is_active VARCHAR(50) NULL,
+		created_at VARCHAR(50) NULL
 	
 );
 PRINT 'bronze.products TABLE CREATED!!';
@@ -61,17 +61,17 @@ IF OBJECT_ID ('bronze.orders', 'U') IS NOT NULL
 	DROP TABLE bronze.orders;
 CREATE TABLE bronze.orders
 (
-		order_id INT,
-		customer_id INT,
-		order_date DATETIME,
-		status VARCHAR(50),
-		channel VARCHAR(50),
-		subtotal FLOAT,
-		discount_amount FLOAT,
-		shipping_fee FLOAT,
-		tax_amount FLOAT,
-		total_amount FLOAT,
-		currency VARCHAR(50)	
+		order_id VARCHAR(50) NULL,
+		customer_id VARCHAR(50) NULL,
+		order_date VARCHAR(50) NULL,
+		status VARCHAR(50) NULL,
+		channel VARCHAR(50) NULL,
+		subtotal VARCHAR(50) NULL,
+		discount_amount VARCHAR(50) NULL,
+		shipping_fee VARCHAR(50) NULL,
+		tax_amount VARCHAR(50) NULL,
+		total_amount VARCHAR(50) NULL,
+		currency VARCHAR(50) NULL	
 );
 PRINT 'bronze.orders TABLE CREATED!!';
 --=================================================================================================
@@ -84,12 +84,12 @@ IF OBJECT_ID ('bronze.order_items', 'U') IS NOT NULL
 	DROP TABLE bronze.order_items;
 CREATE TABLE bronze.order_items
 (
-		order_item_id INT,
-		order_id INT,
-		product_id INT,
-		quantity INT,
-		unit_price FLOAT,
-		line_total FLOAT
+		order_item_id VARCHAR(50) NULL,
+		order_id VARCHAR(50) NULL,
+		product_id VARCHAR(50) NULL,
+		quantity VARCHAR(50) NULL,
+		unit_price VARCHAR(50) NULL,
+		line_total VARCHAR(50) NULL
 );
 PRINT 'bronze.order_items TABLE CREATED!!';
 --=================================================================================================
@@ -102,12 +102,12 @@ IF OBJECT_ID ('bronze.payments', 'U') IS NOT NULL
 	DROP TABLE bronze.payments;
 CREATE TABLE bronze.payments
 (
-		payment_id INT,
-		order_id INT,
-		method VARCHAR(50),
-		amount FLOAT,
-		paid_at DATETIME,
-		status VARCHAR(50)
+		payment_id VARCHAR(50) NULL,
+		order_id VARCHAR(50) NULL,
+		method VARCHAR(50) NULL,
+		amount VARCHAR(50) NULL,
+		paid_at VARCHAR(50) NULL,
+		status VARCHAR(50) NULL
 );
 PRINT 'bronze.payments TABLE CREATED!!';
 --=================================================================================================
@@ -120,13 +120,13 @@ IF OBJECT_ID ('bronze.shipments', 'U') IS NOT NULL
 	DROP TABLE bronze.shipments;
 CREATE TABLE bronze.shipments
 (
-		shipment_id INT,
-		order_id INT,
-		carrier VARCHAR(50),
-		tracking_number VARCHAR(50),
-		shipped_at DATETIME,
-		delivered_at DATETIME,
-		status VARCHAR(50)
+		shipment_id VARCHAR(50) NULL,
+		order_id VARCHAR(50) NULL,
+		carrier VARCHAR(50) NULL,
+		tracking_number VARCHAR(50) NULL,
+		shipped_at VARCHAR(50) NULL,
+		delivered_at VARCHAR(50) NULL,
+		status VARCHAR(50) NULL
 );
 PRINT 'bronze.shipments TABLE CREATED!!';
 --=================================================================================================
@@ -139,12 +139,12 @@ IF OBJECT_ID ('bronze.returns', 'U') IS NOT NULL
 	DROP TABLE bronze.returns;
 CREATE TABLE bronze.returns
 (
-		return_id INT,
-		order_item_id INT,
-		reason VARCHAR(50),
-		refund_amount FLOAT,
-		requested_at DATETIME,
-		status VARCHAR(50)
+		return_id VARCHAR(50) NULL,
+		order_item_id VARCHAR(50) NULL,
+		reason VARCHAR(50) NULL,
+		refund_amount VARCHAR(50) NULL,
+		requested_at VARCHAR(50) NULL,
+		status VARCHAR(50) NULL
 );
 PRINT 'bronze.returns TABLE CREATED!!';
 --=================================================================================================
